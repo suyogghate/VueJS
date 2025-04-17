@@ -1,0 +1,4 @@
+# Concepts used in this project
+# VueJs, tailwind css, Async/Await, Axios for fetching, Reactive and ref, PulseLoader
+# onMounted lifecycle hook, vue-router, conditional rendering, json server for jobs
+# props, proxying
