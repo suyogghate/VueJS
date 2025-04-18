@@ -44,18 +44,22 @@
     </template>
   </NamedSlot> -->
 
-  <hr>
+  <!-- <hr> -->
 
-  <DefaultSlot>
+  <!-- <DefaultSlot>
     <template #default>
       <h1>This is some random default slot</h1>
     </template>
-  </DefaultSlot>
+  </DefaultSlot> -->
 
+  <!-- <SchoolComponent /> -->
+
+  <PracticeComponent />
 </template>
 
 <script setup>
 // import { ref } from 'vue';
+import { provide } from 'vue'
 // import GlobalStyle from './components/GlobalStyle.vue';
 // import LocalStyle from './components/LocalStyle.vue';
 // import CombinedStyle from './components/CombinedStyle.vue';
@@ -71,7 +75,9 @@
 // import SlotComponent from './components/SlotComponent.vue';
 // import FallbackContent from './components/FallbackContent.vue';
 // import NamedSlot from './components/NamedSlot.vue';
-import DefaultSlot from './components/DefaultSlot.vue';
+// import DefaultSlot from './components/DefaultSlot.vue';
+// import SchoolComponent from './components/SchoolComponent.vue'
+import PracticeComponent from './components/PracticeComponent.vue';
 
 
 // import StaticPropsComponent from './components/StaticPropsComponent.vue';
@@ -93,6 +99,60 @@ import DefaultSlot from './components/DefaultSlot.vue';
 //   console.log('email', email);
 //   console.log('password', password);
 // }
+
+// const studentName = "Alex"
+// const studentAge = 20
+// const studentLocation = ['Earth', 'IDK']
+
+// provide('studentName', 'Alex')
+// provide('studentAge', 20)
+// provide('studentLocation', ['Earth', 'IDK'])
+
+// provide array
+provide('friends', ['Alex', 'Jordan', 'Huxn', 'John'])
+
+// Provide object
+provide('games', {
+  id: 1,
+  title: "GTA SanAndreas",
+  genre: ['Action', 'Mission'],
+  platform: ['PC', 'PlayStation', 'Xbox', 'Nitendo Switch'],
+  releaseDate: '2023-03-16',
+  developer: {
+    name: 'Rockstar Games',
+    location: 'San Francisco, CA',
+    teamSize: 50
+  }
+})
+
+// Provide array of Objects
+provide('moreGames', [
+  {
+    title: 'Space Explorer',
+    genre: 'Sci-Fi',
+    platform: 'PC',
+    releaseDate: '2023-05-20'
+  },
+  {
+    title: 'Fantasy Quest',
+    genre: 'Fantasy',
+    platform: 'PlayStation',
+    releaseDate: '2023-07-10'
+  },
+  {
+    title: 'Inception',
+    director: 'Christopher Nolan',
+    genre: 'Sci-Fi',
+    releaseDate: '2010-07-16'
+  },
+  {
+    title: 'The Shawshank Redemption',
+    director: 'Frank Darabont',
+    genre: 'Drama',
+    releaseDate: '1994-09-23'
+  }
+])
+
 </script>
 
 <style scoped>
