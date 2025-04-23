@@ -63,7 +63,13 @@
 
    <!-- <ReactiveObject /> -->
 
-  <MultipleSources />
+  <!-- <MultipleSources /> -->
+
+   <!-- <BasicRef /> -->
+
+  <!-- <FunctionRef /> -->
+
+  <RefComponent /> 
 </template>
 
 <script setup>
@@ -91,7 +97,10 @@
 // const showHide = ref(true)
 // import Watchers from './components/Watchers.vue';
 // import ReactiveObject from './components/ReactiveObject.vue';
-import MultipleSources from './components/MultipleSources.vue';
+// import MultipleSources from './components/MultipleSources.vue';
+// import BasicRef from './components/BasicRef.vue';
+// import FunctionRef from './components/FunctionRef.vue';
+import RefComponent from './components/RefComponent.vue';
 
 
 // import StaticPropsComponent from './components/StaticPropsComponent.vue';
