@@ -71,7 +71,9 @@
 
   <!-- <RefComponent />  -->
 
-  <ToggleFriends />
+  <!-- <ToggleFriends /> -->
+
+  <CounterComponent />
 </template>
 
 <script setup>
@@ -103,7 +105,8 @@
 // import BasicRef from './components/BasicRef.vue';
 // import FunctionRef from './components/FunctionRef.vue';
 // import RefComponent from './components/RefComponent.vue';
-import ToggleFriends from './components/ToggleFriends.vue';
+// import ToggleFriends from './components/ToggleFriends.vue';
+import CounterComponent from './components/CounterComponent.vue';
 
 
 // import StaticPropsComponent from './components/StaticPropsComponent.vue';
