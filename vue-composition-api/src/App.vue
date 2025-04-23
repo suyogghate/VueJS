@@ -69,7 +69,9 @@
 
   <!-- <FunctionRef /> -->
 
-  <RefComponent /> 
+  <!-- <RefComponent />  -->
+
+  <ToggleFriends />
 </template>
 
 <script setup>
@@ -100,7 +102,8 @@
 // import MultipleSources from './components/MultipleSources.vue';
 // import BasicRef from './components/BasicRef.vue';
 // import FunctionRef from './components/FunctionRef.vue';
-import RefComponent from './components/RefComponent.vue';
+// import RefComponent from './components/RefComponent.vue';
+import ToggleFriends from './components/ToggleFriends.vue';
 
 
 // import StaticPropsComponent from './components/StaticPropsComponent.vue';
