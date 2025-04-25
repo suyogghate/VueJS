@@ -75,7 +75,12 @@
 
   <!-- <CounterComponent /> -->
 
-  <MyComponent3 />
+  <!-- <MyComponent3 /> -->
+
+  <!-- <MainComponent /> -->
+
+  <GettingDataWithFetch />
+  <GettingDataWithAxios />
 </template>
 
 <script setup>
@@ -109,7 +114,10 @@
 // import RefComponent from './components/RefComponent.vue';
 // import ToggleFriends from './components/ToggleFriends.vue';
 // import CounterComponent from './components/CounterComponent.vue';
-import MyComponent3 from './components/MyComponent3.vue';
+// import MyComponent3 from './components/MyComponent3.vue';
+// import MainComponent from './components/DynamicComponents/MainComponent.vue';
+import GettingDataWithFetch from './components/DataFetching/GettingDataWithFetch.vue';
+import GettingDataWithAxios from './components/DataFetching/GettingDataWithAxios.vue';
 
 
 // import StaticPropsComponent from './components/StaticPropsComponent.vue';
