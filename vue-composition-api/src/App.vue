@@ -87,7 +87,8 @@
   <!-- <FormValidation /> -->
   <!-- <PasswordGenerator /> -->
   <!-- <ProgressSteps /> -->
-  <DadJokes />
+  <!-- <DadJokes /> -->
+  <WikiClone />
 </template>
 
 <script setup>
@@ -131,7 +132,8 @@
 // import FormValidation from './components/Projects/FormValidation.vue';
 // import PasswordGenerator from './components/Projects/PasswordGenerator.vue';
 // import ProgressSteps from './components/Projects/ProgressSteps.vue';
-import DadJokes from './components/Projects/DadJokes.vue';
+// import DadJokes from './components/Projects/DadJokes.vue';
+import WikiClone from './components/Projects/WikiClone.vue';
 
 
 
