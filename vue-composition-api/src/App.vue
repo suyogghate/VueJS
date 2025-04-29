@@ -79,8 +79,15 @@
 
   <!-- <MainComponent /> -->
 
-  <GettingDataWithFetch />
-  <GettingDataWithAxios />
+  <!-- <GettingDataWithFetch /> -->
+  <!-- <GettingDataWithAxios /> -->
+   <!-- ---------------------------------------------- -->
+  <!-- <TodoList /> -->
+  <!-- <RandomQuoteGenerator /> -->
+  <!-- <FormValidation /> -->
+  <!-- <PasswordGenerator /> -->
+  <!-- <ProgressSteps /> -->
+  <DadJokes />
 </template>
 
 <script setup>
@@ -116,8 +123,16 @@
 // import CounterComponent from './components/CounterComponent.vue';
 // import MyComponent3 from './components/MyComponent3.vue';
 // import MainComponent from './components/DynamicComponents/MainComponent.vue';
-import GettingDataWithFetch from './components/DataFetching/GettingDataWithFetch.vue';
-import GettingDataWithAxios from './components/DataFetching/GettingDataWithAxios.vue';
+// import GettingDataWithFetch from './components/DataFetching/GettingDataWithFetch.vue';
+// import GettingDataWithAxios from './components/DataFetching/GettingDataWithAxios.vue';
+// ---------------------------------------------------
+// import TodoList from './components/Projects/TodoList.vue';
+// import RandomQuoteGenerator from './components/Projects/RandomQuoteGenerator.vue';
+// import FormValidation from './components/Projects/FormValidation.vue';
+// import PasswordGenerator from './components/Projects/PasswordGenerator.vue';
+// import ProgressSteps from './components/Projects/ProgressSteps.vue';
+import DadJokes from './components/Projects/DadJokes.vue';
+
 
 
 // import StaticPropsComponent from './components/StaticPropsComponent.vue';
