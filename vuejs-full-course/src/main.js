@@ -1,4 +1,3 @@
-import './assets/main.css'
 import './fanta.css'
 import { createApp } from 'vue'
 import App from './App.vue'
