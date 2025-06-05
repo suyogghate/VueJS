@@ -4,6 +4,10 @@ import {gymHealthFacts} from '../../utils';
 // generate a random whole integer between 0 and array.length-1
 const randomNumber = Math.floor(Math.random() * gymHealthFacts.length);
 const todaysFact = gymHealthFacts[randomNumber];
+const props = defineProps({
+    handleSelectWorkout: Function,
+    firstIncompleteWorkoutIndex: Number
+})
 </script>
 
 <template>
@@ -13,9 +17,9 @@ const todaysFact = gymHealthFacts[randomNumber];
         <div>
             <p class="tip"><strong>Daily Tip</strong><br/>{{ todaysFact }}</p>
         </div>
-        <button>Start Workout &rarr;</button>
+        <button @click="() => handleSelectWorkout(firstIncompleteWorkoutIndex < 0 ? 0 : firstIncompleteWorkoutIndex)">Start Workout &rarr;</button>
     </div>
-    <Grid />
+    <Grid v-bind="props"/>
   </section>
 </template>
 
