@@ -3,7 +3,7 @@
 
 <template>
   <header>
-    <h1>SMOLGRAM</h1>
+    <h1 class="text-gradient">REP PLANNER</h1>
   </header>
   <main>
     <slot/>
