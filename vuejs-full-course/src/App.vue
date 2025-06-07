@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import Welcome from './components/pages/Welcome.vue';
 import Layout from './components/layouts/Layout.vue';
 import Dashboard from './components/pages/Dashboard.vue';
@@ -60,6 +60,22 @@ function handleSaveWorkout() {
 
   selectedWorkout.value = -1;
 }
+
+function handleResetPlan() {
+  selectedDisplay.value = 2;
+  selectedWorkout.value = -1;
+  data.value = defaultData;
+  localStorage.removeItem('workouts')
+}
+
+onMounted(() => {
+  if (!localStorage) {return}
+  if (localStorage.getItem('workouts')) {
+    const savedData = JSON.parse(localStorage.getItem('workouts'));
+    data.value = savedData;
+    selectedDisplay.value = 2
+  }
+})
 </script>
 
 <template>
@@ -68,7 +84,7 @@ function handleSaveWorkout() {
         <!-- PAGE 1 -->
         <Welcome :handleChangeDisplay="handleChangeDisplay" v-if="selectedDisplay == 1"/>
         <!-- PAGE 2 -->
-        <Dashboard :firstIncompleteWorkoutIndex="firstIncompleteWorkoutIndex" :handleSelectWorkout="handleSelectWorkout" v-if="selectedDisplay == 2"/>
+        <Dashboard :handleResetPlan="handleResetPlan" :firstIncompleteWorkoutIndex="firstIncompleteWorkoutIndex" :handleSelectWorkout="handleSelectWorkout" v-if="selectedDisplay == 2"/>
         <!-- PAGE 3 -->
          <Workout :handleSaveWorkout="handleSaveWorkout" :isWorkoutComplete="isWorkoutComplete" :data="data" :selectedWorkout="selectedWorkout" v-if="workoutProgram?.[selectedWorkout] "/>
     </Layout>
