@@ -3,6 +3,8 @@ import { ref, computed } from 'vue';
 import { workoutProgram, exerciseDescriptions } from '@/utils';
 import Portal from '../Portal.vue';
 
+const workoutType = ['Push', 'Pull', 'Legs'];
+
 const { data, selectedWorkout } = defineProps({
   data: Object,
   selectedWorkout: Number,
@@ -36,7 +38,7 @@ function handleCloseModal() {
         <p>Day {{ selectedWorkout < 9 ? '0'+(selectedWorkout+1) : (selectedWorkout+1) }}</p>
         <i class="fa-solid fa-dumbbell"></i>
       </div>
-      <h2>{{ 'Push' }} Workout</h2>
+      <h2>{{ workoutType[selectedWorkout % 3] }} Workout</h2>
     </div>
     <div class="workout-grid">
       <h4 class="grid-name">Warmup</h4>
@@ -107,6 +109,13 @@ function handleCloseModal() {
 .workout-grid-row,
 .workout-grid-line {
   grid-column: span 7 / span 7;
+}
+
+.workout-grid-line {
+  margin: 0.5rem 0;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--background-muted);
 }
 
 .grid-name {
